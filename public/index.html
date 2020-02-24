@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <title>ToDO's</title>
+  <link rel="stylesheet" href="./css/styles.css">
+<script src="./js/bundle.js"></script>
+  <body>
+<div id="app">
+
+  <li v-for="todo in todos">
+    <span>{{todo}} </span>
+  </li>
+
+  <form @submit.prevent="saveNewItem">
+      <label for="new-item">Add a new item:</label>
+      <input type="text" id="new-item" v-model="newItem">
+      <input type="submit" value="Save new item">
+    </form>
+
+  </div>
+  </body>
+</html>
