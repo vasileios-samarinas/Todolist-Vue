@@ -4,12 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
       el: "#app",
       data: {
-        todos:["buyshopping","MOT","cleandishes"],
-        newItem:""
-      },
+        todos:[{name:"buyshopping",Priority:"low" },{name:"MOT",Priority:"high"},
+        {name:"cleandishes",Priority:"high"}],
+        newItem:""},
+
       methods: {
         saveNewItem: function(){
-          this.todos.push(this.newItem);
-          this.newItem = "";
+          this.todos.push({
+            name:this.newItem,
+            Priority:"Low"
+          });
+          this.newItem="";
         }
       }
+});
+})
+      //
+      // data: {
+      //   items: [ //MODIFIED
+      //     {name: "Milk", isPurchased: false},
+      //     {name: "Cheese", isPurchased: true},
+      //     {name: "Beans", isPurchased: false},
+      //   ],
+      //   newItem: ""
+      // },

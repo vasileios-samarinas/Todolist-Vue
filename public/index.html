@@ -10,15 +10,15 @@
   <body>
 <div id="app">
 
-  <li v-for="todo in todos">
-    <span>{{todo}} </span>
+  <li v-for="todo in todos" :class="todo.Priority==='high' ? 'high':'low'">
+  {{todo.name}}
   </li>
 
   <form @submit.prevent="saveNewItem">
-      <label for="new-item">Add a new item:</label>
-      <input type="text" id="new-item" v-model="newItem">
-      <input type="submit" value="Save new item">
-    </form>
+    <label for="new-item">Add a new todo task:</label>
+    <input type="text" id="new-todo" v-model="newItem">
+    <input type="submit" value="Save new item">
+  </form>
 
   </div>
   </body>
