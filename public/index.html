@@ -17,7 +17,17 @@
   <form @submit.prevent="saveNewItem">
     <label for="new-item">Add a new todo task:</label>
     <input type="text" id="new-todo" v-model="newItem">
-    <input type="submit" value="Save new item">
+    <!-- <input type="submit" value="Save new item"> --> 
+    <div>
+  <label for="Priority">High</label>
+  <input type="radio" id="high" name="Priority" value="High">
+</div>
+<div>
+  <label for="Priority">Low</label>
+  <input type="radio" id="low" name="Priority" value="Low">
+</div>
+
+<input type="submit" value="Save new item">
   </form>
 
   </div>

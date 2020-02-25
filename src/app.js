@@ -12,19 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         saveNewItem: function(){
           this.todos.push({
             name:this.newItem,
-            Priority:"Low"
+            Priority:"low"
           });
           this.newItem="";
         }
       }
 });
 })
-      //
-      // data: {
-      //   items: [ //MODIFIED
-      //     {name: "Milk", isPurchased: false},
-      //     {name: "Cheese", isPurchased: true},
-      //     {name: "Beans", isPurchased: false},
-      //   ],
-      //   newItem: ""
-      // },
